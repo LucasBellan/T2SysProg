@@ -694,3 +694,89 @@
 	"Robot.h"
 	"Texture.h"
 
+1402363783 source:/home/PORTOALEGRE/13104441/Documents/T2SysProg/C3PO.cpp
+	"C3PO.h"
+	"GL.h"
+	<stdlib.h>
+	<time.h>
+	<iostream>
+
+1402361888 /home/PORTOALEGRE/13104441/Documents/T2SysProg/C3PO.h
+	"Maze.h"
+	"Robot.h"
+	"Texture.h"
+
+1402361888 /home/PORTOALEGRE/13104441/Documents/T2SysProg/Maze.h
+	"Point.h"
+	<string>
+
+1402361888 /home/PORTOALEGRE/13104441/Documents/T2SysProg/Point.h
+
+1402361888 /home/PORTOALEGRE/13104441/Documents/T2SysProg/Robot.h
+	<vector>
+	"Point.h"
+
+1402361888 /home/PORTOALEGRE/13104441/Documents/T2SysProg/Texture.h
+	<stdio.h>
+	<stdlib.h>
+	<string>
+	<GLUT/glut.h>
+	<GL/freeglut.h>
+	<jpeglib.h>
+
+1402361888 /home/PORTOALEGRE/13104441/Documents/T2SysProg/GL.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cmath>
+	<GLUT/glut.h>
+	<GL/glut.h>
+	"Maze.h"
+	"Robot.h"
+	"Texture.h"
+
+1402363149 source:/home/PORTOALEGRE/13104441/Documents/T2SysProg/CreateMaze.cpp
+	<iostream>
+	"CreateMaze.h"
+
+1402362422 /home/PORTOALEGRE/13104441/Documents/T2SysProg/CreateMaze.h
+	<fstream>
+	"Maze.h"
+
+1402363679 source:/home/PORTOALEGRE/13104441/Documents/T2SysProg/GL.cpp
+	"GL.h"
+	<sstream>
+
+1402361888 source:/home/PORTOALEGRE/13104441/Documents/T2SysProg/RobotB9.cpp
+	"RobotB9.h"
+	"GL.h"
+	<stdlib.h>
+	<time.h>
+	<iostream>
+
+1402361888 /home/PORTOALEGRE/13104441/Documents/T2SysProg/RobotB9.h
+	"Maze.h"
+	"Robot.h"
+	"Texture.h"
+
+1402363556 source:/home/PORTOALEGRE/13104441/Documents/T2SysProg/TestMaze.cpp
+	"TestMaze.h"
+	<iostream>
+
+1402361888 /home/PORTOALEGRE/13104441/Documents/T2SysProg/TestMaze.h
+	<fstream>
+	"Maze.h"
+
+1402361888 source:/home/PORTOALEGRE/13104441/Documents/T2SysProg/Texture.cpp
+	<math.h>
+	<string.h>
+	<vector>
+	"Texture.h"
+
+1402363708 source:/home/PORTOALEGRE/13104441/Documents/T2SysProg/main.cpp
+	"TestMaze.h"
+	"RobotB9.h"
+	"CreateMaze.h"
+	"GL.h"
+	"C3PO.h"
+

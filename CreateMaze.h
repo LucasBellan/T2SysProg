@@ -19,6 +19,7 @@ class CreateMaze : public Maze {
 		int width, height;	// Maze size
         char lab[100][100];	// The maze
         int robot;
+        int dimx, dimy;
         Point posIni;
 };
 

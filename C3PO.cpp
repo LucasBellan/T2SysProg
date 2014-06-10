@@ -34,7 +34,7 @@ void C3PO::generateSteps()
     int y = initial.getY();
     for (int cont = 0; cont < this->maxSteps; cont++){
         if(x >= maze->getWidth() || x < 0 || y >= maze->getHeight() || y < 0){ return; }
-        if (!this->maze->isEmpty(this->pos.getX()+1)){
+        if (this->maze->isEmpty(this->pos.getX()+1)){
             steps.push_back(Point(x,y));
             x++;
         }
@@ -43,7 +43,7 @@ void C3PO::generateSteps()
 
 void C3PO::generateSteps2()
 {
-     int cont = 1;
+   int cont = 1;
     bool saiu = false;
     int x = iniPos.getX();
     int y = iniPos.getY();
@@ -71,7 +71,8 @@ void C3PO::generateSteps2()
         y += dy;
         steps.push_back(Point(x, y));
         cont++;
-        if(x >= maze->getWidth() || x < 0 || y >= maze->getHeight() || y < 0)
+        if(x >= maze->getWidth() || x < 0
+                || y >= maze->getHeight() || y < 0)
             saiu = true;
     }
 }

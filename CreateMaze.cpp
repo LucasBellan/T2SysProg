@@ -1,5 +1,5 @@
 #include <iostream>
-#include "CREATEMAZE.H"
+#include "CreateMaze.h"
 
 CreateMaze::CreateMaze()
 {
@@ -8,7 +8,7 @@ CreateMaze::CreateMaze()
 
 bool CreateMaze::isEmpty(const Point& pos) const
 {
-    if(pos.getX()<0 || pos.getX()>=height || pos.getY()<0 || pos.getY()>=width) return true;
+    if(pos.getX()<0 || pos.getX()>=dimx || pos.getY()<0 || pos.getY()>=dimy) return true;
     return (lab[pos.getY()][pos.getX()]==' ');
 }
 
@@ -35,19 +35,18 @@ void CreateMaze::loadMaze(string arquivo)
     string a;
     int x,y;
 	reader >> a >> height >> width;
+	dimx = height; dimy = width;
     reader >> a >> x >> y;
 	posIni = Point(x,y);
 	reader >> a >> robot;
 
     char cr = ' ';
+    string aux;
     reader >> noskipws >> cr;
 	for (int i =0; i < height; i++){
-        for (int j=0; j <= width; j++){
-            char b = NULL;
-            reader >> noskipws >> b;
-            if (b == '\n'){ continue;}
-            if (b == '*'){ lab[i][j] = '*';}
-            else { lab[i][j] = ' ';}
+            getline(reader, aux);
+        for (int j=0; j < width; j++){
+                lab[i][j] = aux[j];
         }
 	}
 

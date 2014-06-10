@@ -25,9 +25,13 @@ void TestMaze :: loadMaze(string arquivo) {
 
 // Returns true if the x,y pos is empty
 bool TestMaze :: isEmpty(const Point& pos) const {
-    if(pos.getX()<0 || pos.getX()>=dimx
-                    || pos.getY()<0 || pos.getY()>=dimy) return true;
-    return (lab[pos.getY()][pos.getX()]==' ');
+    if(pos.getX()<0 || pos.getX()>=dimx || pos.getY()<0 || pos.getY()>=dimy){
+      //  cout<<"EMPTY !!"<<endl;
+        return true;
+    }
+    //cout<<"NOT EMPTY !!"<<endl;
+    return (lab[pos.getY()][pos.getX()] == ' ');
+
 }
 
 // Return the maze dimensions
