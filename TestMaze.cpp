@@ -22,6 +22,12 @@ void TestMaze :: loadMaze(string arquivo) {
     robot = 1;
     posIni = Point(1,1);
 }
+bool TestMaze::canIgoThere(const Point& p)
+{
+    return true;
+}
+
+
 
 // Returns true if the x,y pos is empty
 bool TestMaze :: isEmpty(const Point& pos) const {

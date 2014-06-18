@@ -18,6 +18,7 @@ class Maze
 	virtual int  getHeight() = 0;
     virtual int  getRobot() = 0;
     virtual Point getIniPos() = 0;
+    virtual bool canIgoThere(const Point& p) const = 0;
 	virtual void loadMaze(string arquivo) = 0;
 };
 

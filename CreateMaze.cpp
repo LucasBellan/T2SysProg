@@ -17,6 +17,13 @@ int CreateMaze::getWidth()
     return this->width;
 }
 
+bool CreateMaze::canIgoThere(const Point& p)
+{
+    if(lab[p.getX()][p.getY()] == '*')
+        return false;
+    return true;
+}
+
 int CreateMaze::getHeight()
 {
     return this->height;

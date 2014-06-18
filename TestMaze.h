@@ -15,6 +15,7 @@ class TestMaze : public Maze {
 	    void loadMaze(string arquivo);
         int  getRobot();
         char getCharAt(int i, int j);
+        bool canIgoThere(const Point& p);
         Point getIniPos();
 	private:
 		int dimx, dimy;		// Maze size
