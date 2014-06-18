@@ -8,7 +8,7 @@ using namespace std;
 
 int main()
 {
-    //GL::init();
+    GL::init();
     // Load the test maze
     //Maze* lab = new CreateMaze();
     TestMaze* lab = new TestMaze();
@@ -28,10 +28,10 @@ int main()
     cout << "Starting pos: " << posIni.getX() << " , " << posIni.getY() << endl;
     cout << "Width:" << lab->getWidth() << " Height:"<< lab->getHeight()<<endl;
     //RobotB9* robo = new RobotB9(posIni, lab, 200); // 200 passos no maximo
-    //C3PO* robo = new C3PO(posIni, lab, 200); // 200 passos no maximo
+    C3PO* robo = new C3PO(posIni, lab, 200); // 200 passos no maximo
 
-    //GL::setMazeRobot(lab, robo);
+    GL::setMazeRobot(lab, robo);
 
-	//GL::loop();
+	GL::loop();
 
 }

@@ -30,19 +30,17 @@ void C3PO::draw()
 void C3PO::generateSteps()
 {
     Point initial = this->maze->getIniPos();
-    int x = initial.getX();
-    int y = initial.getY();
-
-
-
-
-
-    for (int cont = 0; cont < this->maxSteps; cont++){
-        if(x >= maze->getWidth() || x < 0 || y >= maze->getHeight() || y < 0){ return; }
-        if (this->maze->isEmpty(this->pos.getX()+1)){
-            steps.push_back(Point(x,y));
-            x++;
+    Point actualPosition = Point(initial.getX(),initial.getY());
+    bool saiu = false;
+    while(maxSteps != 0 && !saiu){
+        if(maze->CanIGoThere(actualPosition)){
+            steps.push_back(actualPosition);
+            actualPosition.setX(actualPosition.getX()+1);
         }
+        if(x >= maze->getWidth() || x < 0 || y >= maze->getHeight() || y < 0)
+            saiu = true;
+
+        this->maxSteps--;
     }
 }
 
