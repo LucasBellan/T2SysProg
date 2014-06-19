@@ -31,15 +31,37 @@ void C3PO::generateSteps()
 {
     Point initial = this->maze->getIniPos();
     Point actualPosition = Point(initial.getX(),initial.getY());
+    steps.push_back(actualPosition);
     bool saiu = false;
     while(maxSteps != 0 && !saiu){
-        if(maze->CanIGoThere(actualPosition)){
-            steps.push_back(actualPosition);
+        while(maze->CanIGoThere(Point(actualPosition.getX()+1,actualPosition.getY()))){
+            //cout << actualPosition.getX()+1 << " - " << maze->CanIGoThere(Point(actualPosition.getX()+1,actualPosition.getY())) << endl;
             actualPosition.setX(actualPosition.getX()+1);
+            steps.push_back(actualPosition);
+            if(actualPosition.getX() >= maze->getWidth() || actualPosition.getX() < 0 || actualPosition.getY() >= maze->getHeight() || actualPosition.getY() < 0){
+                saiu = true;
+                break;
+            }
         }
-        if(x >= maze->getWidth() || x < 0 || y >= maze->getHeight() || y < 0)
+        while (maze->CanIGoThere(Point(actualPosition.getX(),actualPosition.getY()+1))){
+            //cout << actualPosition.getY()+1 << " - " << maze->CanIGoThere(Point(actualPosition.getX(),actualPosition.getY()+1)) << endl;
+            actualPosition.setY(actualPosition.getY()+1);
+            steps.push_back(actualPosition);
+            if(actualPosition.getX() >= maze->getWidth() || actualPosition.getX() < 0 || actualPosition.getY() >= maze->getHeight() || actualPosition.getY() < 0){
+                saiu = true;
+                break;
+            }
+        }
+        while (maze->CanIGoThere(Point(actualPosition.getX()-1,actualPosition.getY()))){
+            actualPosition.setX(actualPosition.getX()-1);
+            steps.push_back(actualPosition);
+            if(actualPosition.getX() >= maze->getWidth() || actualPosition.getX() < 0 || actualPosition.getY() >= maze->getHeight() || actualPosition.getY() < 0){
+                saiu = true;
+                break;
+            }
+        }
+        if(actualPosition.getX() >= maze->getWidth() || actualPosition.getX() < 0 || actualPosition.getY() >= maze->getHeight() || actualPosition.getY() < 0)
             saiu = true;
-
         this->maxSteps--;
     }
 }

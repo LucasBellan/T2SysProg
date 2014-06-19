@@ -780,7 +780,7 @@
 	"GL.h"
 	"C3PO.h"
 
-1403118092 source:d:\github\t2sysprog\c3po.cpp
+1403210528 source:d:\github\t2sysprog\c3po.cpp
 	"C3PO.h"
 	"GL.h"
 	<stdlib.h>
@@ -796,7 +796,7 @@
 	"Point.h"
 	<string>
 
-1403118063 d:\github\t2sysprog\point.h
+1403210571 d:\github\t2sysprog\point.h
 
 1402842704 d:\github\t2sysprog\robot.h
 	<vector>
