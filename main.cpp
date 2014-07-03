@@ -11,10 +11,10 @@ int main()
     GL::init();
     // Load the test maze
     //Maze* lab = new CreateMaze();
-    TestMaze* lab = new TestMaze();
-    //CreateMaze* lab = new CreateMaze();
-    //lab->loadMaze("maze1.txt");
-    lab->loadMaze(" ");
+    //TestMaze* lab = new TestMaze();
+    CreateMaze* lab = new CreateMaze();
+    lab->loadMaze("maze1.txt");
+    //lab->loadMaze(" ");
 
     cout<< "Height: " << lab->getHeight()<<" " <<" Width: "<<lab->getWidth()<<" Robot: "<<lab->getRobot()<<endl;
     for (int i =0; i < lab->getHeight(); i++){

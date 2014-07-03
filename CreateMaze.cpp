@@ -17,9 +17,9 @@ int CreateMaze::getWidth()
     return this->width;
 }
 
-bool CreateMaze::canIgoThere(const Point& p)
+bool CreateMaze::CanIGoThere(const Point& ponto) const
 {
-    if(lab[p.getX()][p.getY()] == '*')
+    if(lab[ponto.getY()][ponto.getX()] == '*')
         return false;
     return true;
 }

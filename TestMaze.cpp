@@ -20,13 +20,14 @@ void TestMaze :: loadMaze(string arquivo) {
     }
     lab[dimy-2][dimx-1] = ' '; // exit
     robot = 1;
+    //lab[1][10] = '*';
     posIni = Point(1,1);
 }
 
 
 bool TestMaze::CanIGoThere(const Point& ponto) const
 {
-    if(lab[ponto.getX()][ponto.getY()] == '*')
+    if(lab[ponto.getY()][ponto.getX()] == '*')
         return false;
     return true;
 }
