@@ -35,19 +35,21 @@ void C3PO::generateSteps()
     bool saiu = false;
     while(maxSteps != 0 && !saiu){
         while(maze->CanIGoThere(Point(actualPosition.getX()+1,actualPosition.getY()))){
-            cout << actualPosition.getX()+1 << " - " << maze->CanIGoThere(Point(actualPosition.getX()+1,actualPosition.getY())) << endl;
+            //cout << actualPosition.getX()+1 << " - " << maze->CanIGoThere(Point(actualPosition.getX()+1,actualPosition.getY())) << endl;
             actualPosition.setX(actualPosition.getX()+1);
             steps.push_back(actualPosition);
-            if(actualPosition.getX() >= maze->getWidth() || actualPosition.getX() < 0 || actualPosition.getY() >= maze->getHeight() || actualPosition.getY() < 0){
+            this->maxSteps--;
+            if(maxSteps == 0){ //||actualPosition.getX() >= maze->getWidth() || actualPosition.getX() < 0 || actualPosition.getY() >= maze->getHeight() || actualPosition.getY() < 0){
                 saiu = true;
                 break;
             }
         }
         while (maze->CanIGoThere(Point(actualPosition.getX(),actualPosition.getY()+1))){
-            cout << ">>>" << actualPosition.getY()+1 << " - " << maze->CanIGoThere(Point(actualPosition.getX(),actualPosition.getY()+1)) << endl;
+            //cout << ">>>" << actualPosition.getY()+1 << " - " << maze->CanIGoThere(Point(actualPosition.getX(),actualPosition.getY()+1)) << endl;
             actualPosition.setY(actualPosition.getY()+1);
             steps.push_back(actualPosition);
-            if(actualPosition.getX() >= maze->getWidth() || actualPosition.getX() < 0 || actualPosition.getY() >= maze->getHeight() || actualPosition.getY() < 0){
+            this->maxSteps--;
+            if(maxSteps == 0){ //||actualPosition.getX() >= maze->getWidth() || actualPosition.getX() < 0 || actualPosition.getY() >= maze->getHeight() || actualPosition.getY() < 0){
                 saiu = true;
                 break;
             }
@@ -55,14 +57,25 @@ void C3PO::generateSteps()
         while (maze->CanIGoThere(Point(actualPosition.getX()-1,actualPosition.getY()))){
             actualPosition.setX(actualPosition.getX()-1);
             steps.push_back(actualPosition);
-            if(actualPosition.getX() >= maze->getWidth() || actualPosition.getX() < 0 || actualPosition.getY() >= maze->getHeight() || actualPosition.getY() < 0){
+            this->maxSteps--;
+            if(maxSteps == 0){ //||actualPosition.getX() >= maze->getWidth() || actualPosition.getX() < 0 || actualPosition.getY() >= maze->getHeight() || actualPosition.getY() < 0){
                 saiu = true;
+                break;
+            }
+        }
+
+        while (maze->CanIGoThere(Point(actualPosition.getX(),actualPosition.getY()-1))){
+            actualPosition.setY(actualPosition.getY()-1);
+            steps.push_back(actualPosition);
+            this->maxSteps--;
+            if(maxSteps == 0){// ||actualPosition.getX() >= maze->getWidth() || actualPosition.getX() < 0 || actualPosition.getY() >= maze->getHeight() || actualPosition.getY() < 0){
+                //saiu = true;
                 break;
             }
         }
         if(actualPosition.getX() >= maze->getWidth() || actualPosition.getX() < 0 || actualPosition.getY() >= maze->getHeight() || actualPosition.getY() < 0)
             saiu = true;
-        this->maxSteps--;
+        //this->maxSteps--;
     }
 }
 
