@@ -32,15 +32,15 @@ void C3PO::generateSteps()
     Point initial = this->maze->getIniPos();
     Point actualPosition = Point(initial.getX(),initial.getY());
     steps.push_back(actualPosition);
-    bool saiu = false;
-    while(maxSteps != 0 && !saiu){
+    bool exit = false;
+    while(maxSteps != 0 && !exit){
         while(maze->CanIGoThere(Point(actualPosition.getX()+1,actualPosition.getY()))){
             //cout << actualPosition.getX()+1 << " - " << maze->CanIGoThere(Point(actualPosition.getX()+1,actualPosition.getY())) << endl;
             actualPosition.setX(actualPosition.getX()+1);
             steps.push_back(actualPosition);
             this->maxSteps--;
             if(maxSteps == 0){ //||actualPosition.getX() >= maze->getWidth() || actualPosition.getX() < 0 || actualPosition.getY() >= maze->getHeight() || actualPosition.getY() < 0){
-                saiu = true;
+                exit = true;
                 break;
             }
         }
@@ -50,7 +50,7 @@ void C3PO::generateSteps()
             steps.push_back(actualPosition);
             this->maxSteps--;
             if(maxSteps == 0){ //||actualPosition.getX() >= maze->getWidth() || actualPosition.getX() < 0 || actualPosition.getY() >= maze->getHeight() || actualPosition.getY() < 0){
-                saiu = true;
+                exit = true;
                 break;
             }
         }
@@ -59,7 +59,7 @@ void C3PO::generateSteps()
             steps.push_back(actualPosition);
             this->maxSteps--;
             if(maxSteps == 0){ //||actualPosition.getX() >= maze->getWidth() || actualPosition.getX() < 0 || actualPosition.getY() >= maze->getHeight() || actualPosition.getY() < 0){
-                saiu = true;
+                exit = true;
                 break;
             }
         }
@@ -74,7 +74,7 @@ void C3PO::generateSteps()
             }
         }
         if(actualPosition.getX() >= maze->getWidth() || actualPosition.getX() < 0 || actualPosition.getY() >= maze->getHeight() || actualPosition.getY() < 0)
-            saiu = true;
+            exit = true;
         //this->maxSteps--;
     }
 }
