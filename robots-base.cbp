@@ -105,6 +105,8 @@
 		<Unit filename="TestMaze.h" />
 		<Unit filename="Texture.cpp" />
 		<Unit filename="Texture.h" />
+		<Unit filename="WALL-E.h" />
+		<Unit filename="WALL_E.cpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

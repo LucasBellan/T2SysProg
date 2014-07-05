@@ -3,6 +3,7 @@
 #include "CreateMaze.h"
 #include "GL.h"
 #include "C3PO.h"
+#include "WALL-E.h"
 
 using namespace std;
 
@@ -13,7 +14,7 @@ int main()
     //Maze* lab = new CreateMaze();
     //TestMaze* lab = new TestMaze();
     CreateMaze* lab = new CreateMaze();
-    lab->loadMaze("maze1.txt");
+    lab->loadMaze("maze2.txt");
     //lab->loadMaze(" ");
 
     cout<< "Height: " << lab->getHeight()<<" " <<" Width: "<<lab->getWidth()<<" Robot: "<<lab->getRobot()<<endl;
@@ -28,7 +29,8 @@ int main()
     cout << "Starting pos: " << posIni.getX() << " , " << posIni.getY() << endl;
     cout << "Width:" << lab->getWidth() << " Height:"<< lab->getHeight()<<endl;
     //RobotB9* robo = new RobotB9(posIni, lab, 200); // 200 passos no maximo
-    C3PO* robo = new C3PO(posIni, lab, 200); // 200 passos no maximo
+    //C3PO* robo = new C3PO(posIni, lab, 200); // 200 passos no maximo
+    WALL_E* robo = new WALL_E(posIni, lab, 200);
 
     GL::setMazeRobot(lab, robo);
 

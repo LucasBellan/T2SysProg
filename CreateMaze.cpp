@@ -14,6 +14,7 @@ bool CreateMaze::isEmpty(const Point& pos) const
 
 int CreateMaze::getWidth()
 {
+
     return this->width;
 }
 

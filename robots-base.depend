@@ -847,11 +847,11 @@
 1404503698 d:\github\t2sysprog\include\gl\glut.h
 	"freeglut.h"
 
-1404503698 source:d:\github\t2sysprog\createmaze.cpp
+1404532685 source:d:\github\t2sysprog\createmaze.cpp
 	<iostream>
 	"CreateMaze.h"
 
-1404503698 d:\github\t2sysprog\createmaze.h
+1404532695 d:\github\t2sysprog\createmaze.h
 	<fstream>
 	"Maze.h"
 
@@ -885,12 +885,13 @@
 	<vector>
 	"Texture.h"
 
-1404504091 source:d:\github\t2sysprog\main.cpp
+1404535751 source:d:\github\t2sysprog\main.cpp
 	"TestMaze.h"
 	"RobotB9.h"
 	"CreateMaze.h"
 	"GL.h"
 	"C3PO.h"
+	"WALL-E.h"
 
 1404348080 source:h:\t2sysprog\c3po.cpp
 	"C3PO.h"
@@ -1002,5 +1003,17 @@
 	<math.h>
 	<string.h>
 	<vector>
+	"Texture.h"
+
+1404537498 source:d:\github\t2sysprog\wall_e.cpp
+	"WALL-E.h"
+	"GL.h"
+	<stdlib.h>
+	<time.h>
+	<iostream>
+
+1404535656 d:\github\t2sysprog\wall-e.h
+	"Maze.h"
+	"Robot.h"
 	"Texture.h"
 
